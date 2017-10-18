@@ -128,6 +128,12 @@
 		display: block
 		width: 100%
 		
+	.col-form-label
+		margin-bottom: 0
+		width: 100%
+		display: block
+		padding: 4.5px 0 
+		
 
 .form-control
 	display: block
@@ -136,24 +142,93 @@
 	height: 30px
 	border: 1px solid $grey-border
 	border-radius: 3px
+	transition: all 0.3s ease
+	
+	&:focus
+		border-color: $blue
+	
+select.form-control
+	padding: 0 6px
 	
 
 .input-group
 	display: flex
-	width: 100%
+	width: 100%	
 	
 	&-addon
 		padding: 0 10px
-		background-color: $grey-light 
-		border-top-left-radius: 3px 
-		border-bottom-left-radius: 3px 
+		background-color: #FAFAFA
 		border: 1px solid $grey-border
 		line-height: 28px 
+		white-space: nowrap
+		
+		&:first-child
+			border-radius: 3px 0 0 3px
+			border-right: 0
+			
+		&:last-child
+			border-radius: 0 3px 3px 0
+			border-left: 0
 		
 	.form-control
-		border-top-left-radius: 0px 
-		border-bottom-left-radius: 0px 
-		border-left: 0
+		&:last-child
+			border-radius: 0 3px 3px 0
+			
+		&:first-child
+			border-radius: 3px 0 0 3px
+			
+
+.custom-control
+	display: inline-flex
+	align-items: center
+	margin-right: 20px
+	cursor: pointer
+	padding: 4.5px 0 
+	margin-bottom: 0 
+	
+	&:last-child
+		margin-right: 0
+	
+	input
+		display: none
+		
+	&-indicator + &-description
+		padding-left: 10px 
+		
+	&.custom-radio &-indicator
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		border: 1px solid $grey-border
+		background-color: transparent 
+		
+	&.custom-radio input:checked + &-indicator
+		background-color: $green 
+		border-color: $green
+		
+	&.custom-checkbox &-indicator
+		width: 16px
+		height: 16px
+		border: 1px solid $grey-border
+		background-color: transparent 
+		font-size: 10px
+		line-height: 12px
+		text-align: center  
+		
+	&.custom-checkbox input:checked + &-indicator
+		background-color: $green 
+		border-color: $green
+		color: #fff
+		position: relative
+		
+		&:before
+			@extend .fa
+			content: '\f00c'
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%) 
+			
 
 
 

@@ -131,6 +131,15 @@ jQuery(document).ready(function($) {
     });
 
 
+
+    /*---------------------------
+                                jQuery UI accordion
+    ---------------------------*/
+    $('.accordion').accordion({
+        heightStyle: "content",
+        collapsible: true,
+    });
+
     
     /*---------------------------
                                 PAGE ANCHORS

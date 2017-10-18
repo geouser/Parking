@@ -1,0 +1,280 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/general.css">
+	</head>
+	<body>
+
+
+	
+		<!--=================================================================================================-->
+													<!-- HEADER -->
+		<header class="header">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-sm-4">
+						<a href="index.html" class="header-logo">
+							<img src="images/logo-grey.svg" alt="Park KoPark Mo">
+						</a>
+					</div>
+
+					<div class="login-controls">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<a href="signup.html">Sign Up</a> / <a href="login.html">Sign in</a>
+					</div>
+
+					<div class="col-sm-8 text-lg-right">
+						<nav class="header-menu">
+							<ul>
+								<li class="menu-item menu-item-home current-menu-item"><a href="index">Home</a></li>
+								<li class="menu-item"><a href="about.html">About-us</a></li>
+								<li class="menu-item"><a href="contact.html">Contact</a></li>
+								<li class="menu-item"><a href="#">Guidline</a></li>
+								<li class="menu-item"><a href="#">Terms and conditions</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div><!-- end wrapper -->
+		</header><!-- end header -->
+		
+		<button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>  
+
+
+		<!-- //////////////////////////////////////////////////////////////////////// -->
+		
+		<section class="add-parking">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-12 col-lg-3">
+						<div class="sidebar">
+							<nav class="sidebar-menu">
+								<ul>
+									<li class="menu-item current-menu-item"><a href="#">Dashboard</a></li>
+									<li class="menu-item"><a href="#">My parking space</a></li>
+									<li class="menu-item"><a href="#">Parking Schedule/History</a></li>
+									<li class="menu-item"><a href="#">Account Info</a></li>
+									<li class="menu-item"><a href="#">Change Password</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-9">
+						<div class="block-title">
+							<h2>Share parking space</h2>
+						</div>
+
+						<form action="">
+							<div class="form-group">
+								<label for="" class="label">Street Address</label>
+								<input type="text" class="form-control" name="address">
+							</div>
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="" class="label">City</label>
+										<input type="text" class="form-control" name="city">
+									</div>
+								</div>
+								<div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="" class="label">Postal code</label>
+										<input type="text" class="form-control" name="postal-code">
+									</div>
+								</div>
+								<div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="" class="label">State</label>
+										<input type="text" class="form-control" name="state">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="" class="label">Country</label>
+										<select name="countru" id="" class="form-control">
+											<option value="USA">United States of America</option>
+											<option value="USA">England</option>
+											<option value="USA">Spain</option>
+											<option value="USA">Germany</option>
+											<option value="USA">France</option>
+											<option value="USA">Canada</option>
+											<option value="USA">Australia</option>
+											<option value="USA">New Zealend</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="" class="label">Status</label>
+										<select name="countru" id="" class="form-control">
+											<option value="USA">Active</option>
+											<option value="USA">Not active</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="" class="label">Special description and instructions</label>
+								<input type="text" class="form-control" name="description">
+							</div>
+							<div class="form-group text-group">
+								<h4>Micro Share Schedult</h4>
+								<p>SCHEDULING & PRICING NOTE: Enter your hours of operation below. If you have complex variable rate pricing, leave the prices below empty and use the variable pricing section instead.</p>
+							</div>
+							
+							<div class="form-schedule">
+								<div class="row">
+									<div class="col-12 col-md-4">
+										<div class="form-group">
+											<label for="" class="label">Days of week</label>
+											<div class="day-select">
+												<label>
+													<input type="radio" name="day" value="Sunday">
+													<span>S</span>
+												</label>
+												<label>
+													<input type="radio" name="day" value="Monday">
+													<span>M</span>
+												</label>
+												<label>
+													<input type="radio" name="day" value="Thusday">
+													<span>T</span>
+												</label>
+												<label>
+													<input type="radio" name="day" value="Wednesday">
+													<span>W</span>
+												</label>
+												<label>
+													<input type="radio" name="day" value="Thursday">
+													<span>T</span>
+												</label>
+												<label>
+													<input type="radio" name="day" value="Friday">
+													<span>F</span>
+												</label>
+												<label>
+													<input type="radio" name="day" value="Saturday">
+													<span>S</span>
+												</label>
+											</div>	
+										</div>
+									</div>
+									<div class="col-12 col-md-5">
+										<div class="row">
+											<div class="col-6">
+												<div class="form-group">
+													<label class="label">Start</label>
+													<select name="start-time" id="" class="form-control">
+														<option disabled selected>Start time</option>
+														<option value="00:00 am">00:00 am</option>
+														<option value="01:00 am">01:00 am</option>
+														<option value="02:00 am">02:00 am</option>
+														<option value="03:00 am">03:00 am</option>
+														<option value="04:00 am">04:00 am</option>
+														<option value="05:00 am">05:00 am</option>
+													</select>	
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-group">
+													<label class="label">End</label>
+													<select name="end-time" id="" class="form-control">
+														<option disabled selected>End time</option>
+														<option value="00:00 am">00:00 am</option>
+														<option value="01:00 am">01:00 am</option>
+														<option value="02:00 am">02:00 am</option>
+														<option value="03:00 am">03:00 am</option>
+														<option value="04:00 am">04:00 am</option>
+														<option value="05:00 am">05:00 am</option>
+													</select>	
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-3">
+										<div class="form-group">
+											<label for="" class="label">Price</label>
+											<div class="input-group">
+												<div class="input-group-addon">$</div>
+												<input type="number" class="form-control" name="price">
+											</div>	
+										</div>
+									</div>
+								</div>
+
+								<div class="form-schedule-list">
+									<ul>
+										<li class="item">
+											<input type="hidden" name="schedule[][day]" value="Sunday">
+						                    <input type="hidden" name="schedule[][start-hour]" value="9:00 am">
+						                    <input type="hidden" name="schedule[][end-hour]" value="10:00 am">
+						                    <input type="hidden" name="schedule[][price]" value="9">
+											<span class="item-content">Sunday  9:00 am - 10:00 am  $9/hr. </span>
+											<button class="js-delete-schedule-item">Delete</button>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="form-schedule-footer">
+									<button class="js-add-schedule-item">+ Add Schedule</button>
+								</div>
+							</div> <!-- end form-schedule -->
+
+							<div class="form-group text-group">
+								<p>TIP: Each day is from 12:00am (midnight) to 12:00am (midnight). Overnight schedules must be created as two separate days, ending at midnight the first day and starting at midnight the next day.</p>
+							</div>
+							
+
+						</form> <!-- end form -->
+
+					</div>
+
+				</div>
+			</div>	
+		</section> <!-- end add-parking -->
+		
+
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-6 text-lg-left text-center">
+						<p class="copyright">Copyright@ 2015 Park Ko Park Mo. All Rights Reserved</p>
+					</div>
+					<div class="col-12 col-md-6 text-md-right text-center">
+						<ul class="socials">
+							<li class="social-item"><a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+							<li class="social-item"><a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div id="modal-popup" class="fncb-hide zoom-anim-dialog popup"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk"></script>
+
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

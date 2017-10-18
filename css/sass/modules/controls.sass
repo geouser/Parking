@@ -70,47 +70,174 @@
 
 
 .input.file
-    position: relative
-    padding: 0!important
+	position: relative
+	padding: 0!important
 
-    &:after
-        content: '';
-        width: 38px;
-        height: 38px;
-        border-radius: 6px
-        background-color: #fdbf2d
-        background-size: 20px;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-image: url(../images/upload.svg);
-        position: absolute;
-        top: 50%;
-        right: 21px;
-        -webkit-transform: translate(50%, -50%);
-        -ms-transform: translate(50%, -50%);
-        -o-transform: translate(50%, -50%);
-        transform: translate(50%, -50%);
-        pointer-events: none;
+	&:after
+		content: '';
+		width: 38px;
+		height: 38px;
+		border-radius: 6px
+		background-color: #fdbf2d
+		background-size: 20px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-image: url(../images/upload.svg);
+		position: absolute;
+		top: 50%;
+		right: 21px;
+		-webkit-transform: translate(50%, -50%);
+		-ms-transform: translate(50%, -50%);
+		-o-transform: translate(50%, -50%);
+		transform: translate(50%, -50%);
+		pointer-events: none;
 
-    input[type="file"] 
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0
-        bottom: 0
-        z-index: 2;
-        opacity: 0;
-        cursor: pointer;
+	input[type="file"] 
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0
+		bottom: 0
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
 
-        &::-webkit-file-upload-button
-            cursor: pointer;
+		&::-webkit-file-upload-button
+			cursor: pointer;
 
 
-    span
-        +textEnd();
-        display: block
-        height: 100%
-        padding: 0 55px 0 15px
-        text-align: left
+	span
+		+textEnd();
+		display: block
+		height: 100%
+		padding: 0 55px 0 15px
+		text-align: left
+		
+
+
+
+.form-group
+	margin-bottom: 20px
+	font-family: $os
+	font-weight: 300  
+	position: relative
+	
+	.label
+		display: block
+		width: 100%
+		
+
+.form-control
+	display: block
+	width: 100%
+	padding: 0 10px
+	height: 30px
+	border: 1px solid $grey-border
+	border-radius: 3px
+	
+
+.input-group
+	display: flex
+	width: 100%
+	
+	&-addon
+		padding: 0 10px
+		background-color: $grey-light 
+		border-top-left-radius: 3px 
+		border-bottom-left-radius: 3px 
+		border: 1px solid $grey-border
+		line-height: 28px 
+		
+	.form-control
+		border-top-left-radius: 0px 
+		border-bottom-left-radius: 0px 
+		border-left: 0
+
+
+
+
+.form-schedule
+	@extend .form-group 
+
+.day-select
+	display: flex
+	width: 100%
+	position: relative
+	
+	label
+		padding: 0 1px
+		width: 14.285%
+		cursor: pointer
+		margin-bottom: 0 
+		
+		input
+			display: none
+			
+		span
+			background-color: #CCCCCC 
+			color: #000
+			display: block
+			line-height: 30px
+			text-align: center 
+			
+		input:checked + span
+			background-color: $green
+			color: #fff 
+
+
+.error
+	position: absolute
+	top: 100%
+	left: 0	
+	font-size: 12px
+	color: $red 
+
+
+.form-schedule-list
+	ul
+		margin-bottom: 0
+		 
+	.item
+		display: flex
+		margin-bottom: 5px 
+		
+		&:last-child
+			margin-bottom: 20px 
+		
+		.item-content
+			width: 100%
+			padding-right: 15px
+			text-align: right 
+			
+		button
+			border-radius: 3px
+			background-color: transparent
+			padding: 0 3px 
+			border: 1px solid $grey-border
+			color: $grey
+			cursor: pointer
+			transition: all 0.3s ease
+			
+			&:hover
+				border-color: $red 
+				background-color: $red
+				color: #fff 
+				
+.form-schedule-footer
+	text-align: right
+	
+	button
+		background-color: transparent
+		border-radius: 3px
+		border: 1px solid $grey-dark
+		color: $grey-dark
+		transition: all 0.3s ease
+		height: 30px
+		
+		&:hover
+			cursor: pointer
+			background-color: $green
+			border-color: $green
+			color: #fff 

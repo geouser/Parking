@@ -1,46 +1,90 @@
 .header
-	+position(absolute, 0, 0, auto, 0)
-	+transition(all, .4s)
+	padding: 45px 0 30px
+	border-bottom: 1px solid $grey-border
+	margin-bottom: 30px 
 	
-	height: 80px
-	color: #FFF
-	background: rgba(0,0,0,.2)
+	.container
+		position: relative
+		
+	.login-controls
+		position: absolute
+		right: 15px
+		top: -45px
+		background-color: #E1E1E1 
+		padding: 5px 10px 5px 30px
+		text-transform: uppercase
+		font-size: 12px 
+		
+		a
+			color: inherit
+			
+			&:hover
+				text-decoration: underline
+				
+		.fa
+			position: absolute
+			top: 50%
+			left: 15px
+			font-size: 14px 
+			transform: translate(-50%, -50%) 
+			
+	&-logo
+		display: inline-block
+		max-width: 100%
+		width: 210px
+		
+		img
+			display: block
+			max-width: 100% 
+			
+
+
+.header-menu
+	background-color: #F4F2F3
+	text-transform: uppercase
+	display: inline-block
+	padding: 5px 10px 5px 20px
+	position: relative
+	border-radius: 4px
+	font-size: 12px 
 	
-	.wrapper
-		height: 100%
-
-		& > div:first-of-type
-			text-align: left
-
-		& > div:last-of-type 
-			text-align: right
-
-/* ------------------------------------ */
-/*  NAV STYLES  */
-
-.page-menu
 	ul
-		list-style-type: none
-
-		li
-			display: inline-block
-			vertical-align: middle
-			margin: 0 10px
-
+		display: flex
+		align-items: center
+		margin: 0
+		
+	.menu-item
+		list-style: none 
+		
+		a
+			color: inherit
+			display: block
+			
+		& + .menu-item
+			margin-left: 20px 
+			
+		&-home
+			font-size: 0
+			 
 			a
-				color: #fff
-				text-transform: uppercase
+				&:before
+					@extend .fa
+					content: '\f015'
+					font-size: 14px
+					display: block
+					color: inherit
+					font-size: 14px 
+					
+				&:hover
+					text-decoration: none
+					
+		&:hover,
+		&.current-menu-item
+			color: $green
+		
+			
 
-/* ------------------------------------ */
-/*  MENU BUTTON  */
 
 .menu-button
-	display: none
-	+position(fixed, 15px, 10px, auto, auto)
-	background: white
-	border-radius: 50%
-	box-shadow: 0 5px 10px rgba(black, 0.5)
-	cursor: pointer
-	transform: rotate(0deg)
-	transition: .5s ease-in-out
-	cursor: pointer
+	@media (min-width: 991px)
+		display: none

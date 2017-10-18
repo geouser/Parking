@@ -65,6 +65,72 @@ jQuery(document).ready(function($) {
             
         });
     });
+
+
+    /*---------------------------
+                                  Schedule controls
+    ---------------------------*/
+    $(document).on('click', '.js-delete-schedule-item', function(event) {
+        event.preventDefault();
+        $(this).parent().fadeOut('400', function() {
+            $(this).remove();
+        });
+    });
+
+    $('.js-add-schedule-item').on('click', function(event) {
+        event.preventDefault();
+        $('.form-schedule .error').remove();
+        var day, start, end, price;
+        var day_input = $('.form-schedule input[name="day"]:checked');
+        var start_input = $('.form-schedule select[name="start-time"]');
+        var end_input = $('.form-schedule select[name="end-time"]');
+        var price_input = $('.form-schedule input[name="price"]');
+
+
+        if ( day_input.val() ) {
+            day = day_input.val();
+        } else {
+            $('.day-select').append('<span class="error">Select day</span>')
+        }
+
+        if ( start_input.val() ) {
+            start = start_input.val()
+        } else {
+            start_input.parents('.form-group').append('<span class="error">Select start hour</span>')
+        }
+
+        if ( end_input.val() ) {
+            end = end_input.val()
+        } else {
+            end_input.parents('.form-group').append('<span class="error">Select end hour</span>')
+        }
+
+        if ( price_input.val() ) {
+            price = price_input.val()
+        } else {
+            price_input.parents('.form-group').append('<span class="error">Set price</span>')
+        }
+        
+
+        if ( day && start && end && price ) {
+            $('.form-schedule-list ul').append(
+                '<li class="item">'+
+                    '<input type="hidden" name="schedule[][day]" value="'+day+'">'+
+                    '<input type="hidden" name="schedule[][start-hour]" value="'+start+'">'+
+                    '<input type="hidden" name="schedule[][end-hour]" value="'+end+'">'+
+                    '<input type="hidden" name="schedule[][price]" value="'+price+'">'+
+                    '<span class="item-content">'+day+'    '+start+' - '+end+'    $'+price+'/hr. </span>'+
+                    '<button class="js-delete-schedule-item">Delete</button>'+
+                '</li>'
+            );
+            $('.form-schedule input[name="day"]').prop('checked', false);
+            start_input.find('option').first().prop('selected', true);
+            end_input.find('option').first().prop('selected', true);
+            price_input.val('');
+        }
+    });
+
+
     
     /*---------------------------
                                 PAGE ANCHORS

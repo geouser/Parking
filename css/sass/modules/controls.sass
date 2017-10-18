@@ -1,0 +1,116 @@
+.button 
+	background-color: peru
+	width: 180px
+	height: 60px
+	line-height: 60px
+	text-align: center
+	text-transform: uppercase
+	color: #fff
+	font-weight: 500
+	font-size: 16px
+	display: inline-block
+	border: none
+	cursor: pointer
+
+	&:disabled
+		opacity: 0.5
+
+	@media (max-width: 1500px) 
+		width: 160px
+		height: 50px
+		line-height: 50px
+
+/* ------------------------------------ */
+/*  SLICK ARROWS  */
+.slick-arrow,
+.slick-arrow:focus,
+.slick-arrow:active,
+.slick-arrow:hover
+	+transition(all, .2s)
+	width: 70px
+	height: 90px
+	z-index: 10
+	background-color:  peru
+	-webkit-border-radius: 2px
+	border-radius: 2px
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	-webkit-background-size: 23px 20px
+	-o-background-size: 23px 20px
+	background-size: 23px 20px
+
+	@media (max-width: 800px)
+		width: 50px
+		height: 70px
+
+	@media (max-width: 600px)
+		width: 30px
+		height: 50px
+		-webkit-background-size: 16px 16px
+		-o-background-size: 16px 16px
+		background-size: 16px 16px
+
+	&:before
+		display: none
+
+.slick-arrow:hover
+	opacity: .8
+
+.slick-next,
+.slick-next:hover,
+.slick-next:focus
+	right: 0
+	background-image: url("../images/right-arrow.svg")
+
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus
+	left: 0
+	background-image: url("../images/left-arrow.svg")
+
+
+.input.file
+    position: relative
+    padding: 0!important
+
+    &:after
+        content: '';
+        width: 38px;
+        height: 38px;
+        border-radius: 6px
+        background-color: #fdbf2d
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-image: url(../images/upload.svg);
+        position: absolute;
+        top: 50%;
+        right: 21px;
+        -webkit-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+        -o-transform: translate(50%, -50%);
+        transform: translate(50%, -50%);
+        pointer-events: none;
+
+    input[type="file"] 
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0
+        bottom: 0
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+
+        &::-webkit-file-upload-button
+            cursor: pointer;
+
+
+    span
+        +textEnd();
+        display: block
+        height: 100%
+        padding: 0 55px 0 15px
+        text-align: left

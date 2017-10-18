@@ -1,0 +1,63 @@
+.offer
+	height: 800px
+	max-height: 100%
+	+flex($d: column, $ai: center, $j: center)
+	
+	background-image: url("../images/offer-main.jpg")
+	background-position: 50% 50%
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	
+	h1
+		margin-bottom: 40px
+		font-size: 70px
+		color: #FFF
+		text-shadow: 0 0 2px rgba(0,0,0,.2)
+
+
+.offer--slider
+	height: 590px
+	position: relative
+	background: #3D8EB9
+	@media (max-width: 600px)
+		height: 500px
+
+	.slick-track,
+	.slick-list
+		height: 100%
+
+	.slide
+		+flex ($d:column, $ai:center, $j:center)
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+
+		@media (max-width: 800px)
+			padding: 0 30px
+
+		h1,
+		h2
+			color: #fff
+			font-size: 50px
+			font-weight: 700
+			text-align: center
+
+			@media (max-width: 1200px)
+				font-size: 40px
+
+			@media (max-width: 800px)
+				font-size: 32px
+
+			@media (max-width: 600px)
+				font-size: 30px
+
+		.button
+			margin-top: 16px

@@ -1,0 +1,46 @@
+.header
+	+position(absolute, 0, 0, auto, 0)
+	+transition(all, .4s)
+	
+	height: 80px
+	color: #FFF
+	background: rgba(0,0,0,.2)
+	
+	.wrapper
+		height: 100%
+
+		& > div:first-of-type
+			text-align: left
+
+		& > div:last-of-type 
+			text-align: right
+
+/* ------------------------------------ */
+/*  NAV STYLES  */
+
+.page-menu
+	ul
+		list-style-type: none
+
+		li
+			display: inline-block
+			vertical-align: middle
+			margin: 0 10px
+
+			a
+				color: #fff
+				text-transform: uppercase
+
+/* ------------------------------------ */
+/*  MENU BUTTON  */
+
+.menu-button
+	display: none
+	+position(fixed, 15px, 10px, auto, auto)
+	background: white
+	border-radius: 50%
+	box-shadow: 0 5px 10px rgba(black, 0.5)
+	cursor: pointer
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer

@@ -159,6 +159,12 @@ jQuery(document).ready(function($) {
         collapsible: true,
     });
 
+
+    /*---------------------------
+                                jQuery UI tabs
+    ---------------------------*/
+    $( ".tabs" ).tabs();
+
     
     /*---------------------------
                                 PAGE ANCHORS

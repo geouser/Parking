@@ -1,0 +1,25 @@
+.tabs-controls
+	display: flex
+	
+	.ui-tab
+		border: 1px solid $grey-border
+		border-radius: 3px
+		list-style: none 
+		transition: all 0.3s ease
+		
+		&.ui-state-active,
+		&.ui-state-hover
+			background-color: $green 
+			
+			a
+				color: #fff
+				text-decoration: none
+		
+		a
+			display: block
+			padding: 5px 15px
+			color: inherit
+			transition: all 0.3s ease
+		
+		&:not(:last-child)
+			margin-right: 4px 

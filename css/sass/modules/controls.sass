@@ -31,7 +31,7 @@
 	user-select: none
 	border: 1px solid transparent
 	padding: .5rem 2rem
-	font-size: 1rem
+	font-size: 14px
 	line-height: 1.25
 	border-radius: .25rem
 	transition: all .15s ease-in-out
@@ -114,6 +114,11 @@
 			background-position: 50% 50%
 			background-repeat: no-repeat 
 			
+			&.profile-image
+				height: 130px
+				background-image: url(../images/man-user.svg)
+				background-size: 30px 
+			
 		.text
 			width: -webkit-calc(100% - 130px)
 			width: calc(100% - 130px)
@@ -171,12 +176,25 @@
 		display: block
 		width: 100%
 		
-	.col-form-label
+	.col-form-label,
+	p
 		margin-bottom: 0
 		width: 100%
 		display: block
 		padding: 4.5px 0 
 		
+
+.group-title
+	font-size: 16px
+	color: $grey-dark
+	font-family: $os  
+	font-weight: normal 
+	padding: 15px 0 20px
+	margin-bottom: 0 
+	
+	&:first-child
+		padding-top: 0
+			
 
 .button-group
 	margin-bottom: 0
@@ -191,11 +209,20 @@
 	border-radius: 3px
 	transition: all 0.3s ease
 	
+	+placeholder
+		opacity: 0.5
+	
 	&:focus
 		border-color: $blue
 	
 select.form-control
 	padding: 0 6px
+	
+textarea.form-control
+	resize: none
+	height: 70px
+	padding-top: 4.5px
+	padding-bottom: 4.5px  
 	
 
 .input-group
@@ -207,6 +234,7 @@ select.form-control
 		background-color: #FAFAFA
 		border: 1px solid $grey-border
 		line-height: 28px 
+		height: 30px
 		white-space: nowrap
 		display: flex
 		align-items: center

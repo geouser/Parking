@@ -1,0 +1,86 @@
+.profile-table
+	width: 100%
+	margin-bottom: 35px 
+	
+	td
+		border-bottom: 1px solid #CCCCCC
+		padding: 12px 0
+		vertical-align: baseline 
+		
+		&:first-child
+			width: 25%
+			
+		&:last-child
+			width: 75%
+			
+		a
+			color: inherit
+			
+
+
+.comment-item
+	display: flex
+	flex-wrap: wrap
+	
+	&:not(:last-child)
+		margin-bottom: 20px
+		
+	&__user
+		width: 65px
+		
+		figure
+			max-width: 100%
+			margin: 0
+			
+			img
+				display: block
+				width: 100%
+				
+			figcaption
+				font-family: $os
+				font-weight: 600
+				color: $grey-dark
+				font-size: 10px
+				margin-top: 3px 
+		
+	&__content
+		width: -webkit-calc(100% - 65px)
+		width: calc(100% - 65px)
+		padding-left: 15px 
+		
+		.body
+			background-color: #ECECEC
+			font-family: $os
+			font-size: 12px
+			padding: 10px 15px
+			border-radius: 3px
+			
+			p
+				margin-bottom: 0
+
+				&:not(:last-child)
+					margin-bottom: 1em 
+					
+		.date
+			margin-top: 10px
+			font-family: $os
+			color: $grey-border
+			font-style: italic
+			font-weight: normal 
+			font-size: 12px 
+			   
+
+
+.comment-form
+	padding-top: 25px
+	padding-left: 80px
+	font-size: 12px 
+	
+	.button-group
+		padding-top: 0 
+		
+		small
+			display: block
+			
+		.btn
+			max-width: 100% 

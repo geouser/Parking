@@ -1,27 +1,3 @@
-.button 
-	background-color: peru
-	width: 180px
-	height: 60px
-	line-height: 60px
-	text-align: center
-	text-transform: uppercase
-	color: #fff
-	font-weight: 500
-	font-size: 16px
-	display: inline-block
-	border: none
-	cursor: pointer
-
-	&:disabled
-		opacity: 0.5
-
-	@media (max-width: 1500px) 
-		width: 160px
-		height: 50px
-		line-height: 50px
-
-
-
 .btn
 	display: inline-block
 	font-weight: 400
@@ -41,7 +17,11 @@
 	&:disabled
 		opacity: 0.5
 		cursor: auto
-	
+	&--narrow
+		padding: 0 6px 
+		height: 25px
+		line-height: 23px  
+		font-size: 13px 
 	&--green
 		color: #fff
 		background-color: $green
@@ -51,6 +31,18 @@
 		color: $grey
 		background-color: #D5D5D5
 		border-color: #D5D5D5 
+		
+	&--orange
+		color: #fff
+		background-color: $orange
+		
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-top: -1px 
+		img
+			max-height: 15px 
+			display: block
 		
 
 /* ------------------------------------ */

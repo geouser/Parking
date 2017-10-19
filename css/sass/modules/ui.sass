@@ -1,20 +1,74 @@
 .tabs
+    margin: 25px auto 
+    border: 1px solid #e0e0e0
     &__nav
         list-style-type: none
+        margin-bottom: 0 
         li
             display: inline-block
             vertical-align: middle
             border-top-left-radius: 4px
             border-top-right-radius: 4px
-            background-color: #E7E7E7 
-            &.ui-state-active
+            background-color: #E7E7E7
+            transition: all .2s  
+            &.ui-state-active,
+            &:hover
                 background-color: $green
                 a
                     color: #FFF 
+                    img
+                        &:first-child
+                            display: none
+                        &:last-child
+                            display: inline-block
             a
                 color: $grey 
                 line-height:    47px
                 display: block
                 padding: 0 14px
+                text-decoration: none
+                letter-spacing: .1em 
+                img
+                    vertical-align: middle
+                    margin-right: 12px 
+                    &:first-child
+                        display: inline-block
+                    &:last-child
+                        display: none
     &__tab
         display: block
+        padding: 20px 
+        p
+            &:last-child
+                margin-bottom: 0 
+                
+.tooltip
+  position: relative
+  cursor: pointer
+  &:hover
+    &::before
+        content: ""
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent
+        border-right: 7px solid transparent
+        border-top: 8px solid #333333
+        position: absolute
+        top: -14px
+        left: 0
+        right: 0
+        margin: auto 
+    &::after
+      content: attr(data-tooltip)
+      position: absolute
+      margin: 0
+      background: #333333
+      color: #fff
+      padding: 2px 10px
+      border-radius: 5px
+      left: 50%
+      transform: translateX(-50%) 
+      bottom: calc(100% + 14px)
+      z-index: 1
+      font-size: 13px 
+      display: block

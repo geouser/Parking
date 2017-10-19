@@ -68,33 +68,33 @@
 										<option value="USA">10*20</option>
 									</select>
 								</div>
-								<p class="filtres__title">Length of Stay</p>
-								<label class="filtres__filter custom-control custom-checkbox">
+								<p class="block-title">Length of Stay</p>
+								<label class="filtres__filter custom-control block custom-checkbox">
 									<input type="checkbox" name="attendant" value="1">
 									<span class="custom-control-indicator"></span>
 									<span class="custom-control-description">Hourly / Flat</span>
 								</label>
-								<label class="filtres__filter custom-control custom-checkbox">
+								<label class="filtres__filter custom-control block custom-checkbox">
 									<input type="checkbox" name="attendant" value="1">
 									<span class="custom-control-indicator"></span>
 									<span class="custom-control-description">Monthly Micro Share</span>
 								</label>
-								<label class="filtres__filter custom-control custom-checkbox">
+								<label class="filtres__filter custom-control block custom-checkbox">
 									<input type="checkbox" name="attendant" value="1">
 									<span class="custom-control-indicator"></span>
 									<span class="custom-control-description">Monthly Dedicated</span>
 								</label>
-								<label class="filtres__filter custom-control custom-checkbox">
+								<label class="filtres__filter custom-control block custom-checkbox">
 									<input type="checkbox" name="attendant" value="1">
 									<span class="custom-control-indicator"></span>
 									<span class="custom-control-description">No public place like  Mall, market</span>
 								</label>
-								<label class="filtres__filter custom-control custom-checkbox">
+								<label class="filtres__filter custom-control block custom-checkbox">
 									<input type="checkbox" name="attendant" value="1">
 									<span class="custom-control-indicator"></span>
 									<span class="custom-control-description">Only Verified Parking</span>
 								</label>
-								<label class="filtres__filter custom-control custom-checkbox">
+								<label class="filtres__filter custom-control block custom-checkbox">
 									<input type="checkbox" name="attendant" value="1">
 									<span class="custom-control-indicator"></span>
 									<span class="custom-control-description">Minimum Charges</span>
@@ -116,18 +116,18 @@
 
 						<div class="container" id="map-canvas"></div>
 					</div>
-					<div class="col col-md-3">
-					</div>
-					<div class="col col-md-9">
-						<button>Verified Parking</button>
-						<button>Not Verified Parking</button>
+
+					<div class="col col-md-3"></div>
+					<div class="col col-md-9 parking-labels">
+						<button class="btn btn--narrow btn--green tooltip" data-tooltip="It is verified and valid parking by Owner "><i><img src="images/done.svg" alt=""></i> Verified Parking</button>
+						<button class="btn btn--narrow btn--orange tooltip" data-tooltip="The HTML."><i><img src="images/exclamation.svg" alt=""></i> Not Verified Parking</button>
 					</div>
 				</div>
 
 				<div class="tabs" id="tabs">
 				    <ul class="tabs__nav">
-				        <li><a href="#tabs-1">Are you a parking owner ?</a></li>
-				        <li><a href="#tabs-2">Are you a car owner ?</a></li>
+				        <li><a href="#tabs-1"><img src="images/cars-icon.png"><img src="images/cars-icon-w.png">Are you a parking owner ?</a></li>
+				        <li><a href="#tabs-2"><img src="images/car-icon2.png"><img src="images/car-icon2-w.png">Are you a car owner ?</a></li>
 				    </ul>
 				    <div id="tabs-1" class="tabs__tab">
 				        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
@@ -136,6 +136,39 @@
 				        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
 				    </div>
 				</div>
+
+				<div class="info-img-text">
+					<div class="row">
+						<div class="col col-md-6">
+							<h3 class="block-title">How It Works !!!</h3>
+							<ul class="steps-list">
+								<li><img src="images/car-icon.png" alt=""> <span>Owner Shares Driver way for desired rate</span></li>
+								<li><img src="images/icon-phone.png" alt=""> <span>Driver Uses App To Find parking</span></li>
+								<li><img src="images/icon-cards.png" alt=""> <span>Driver reserves parking and pay to owner</span></li>
+								<li><img src="images/icon-clock.png" alt=""> <span>Driver Checks in, has A Good Time, Checks Out</span></li>
+							</ul>
+						</div>
+						<div class="col col-md-6 info-img-text__img">
+							<img src="images/works-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="info-img-text">
+					<div class="row align-items-stretch">
+						<div class="col col-md-6 bg-grey">
+							<div class="quote">
+								<p> <img src="images/quote.png" alt=""> I needed parking near my home in North Beach. 
+								Park Circa introduced me to a new neighbor, who lets me park on the street in front of his driveway as his guest, for half the price of what other spaces in the neighborhood cost. Park Circa has been a lifesaver, they've been so helpful, I love them! I hope that more people hear about this amazing idea.</p>
+								<strong>—Angela, San Francisco</strong>
+							</div>
+						</div>
+						<div class="col col-md-6 info-img-text__img">
+							<img src="images/works-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
 
 			</div>
 		</section>

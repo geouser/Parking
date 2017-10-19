@@ -1,0 +1,64 @@
+.info-img-text
+    margin-bottom: 20px
+    letter-spacing: 0.1em 
+    h3
+        font-size: 18px
+        color: #333
+        font-weight: normal 
+    &__img
+        img
+            display: block
+            width: 100% 
+
+.steps-list
+    counter-reset: steps
+    list-style-type: none  
+    li
+        display: block
+        padding: 12px 10px
+        padding-right: 4px 
+        background-color: #e7e7e4
+        margin-bottom: 7px
+        font-size: 14px
+        color: #333          
+        letter-spacing: .05em 
+        &:last-child
+            margin-bottom: 0 
+        &:before
+            counter-increment: steps
+            content: counter(steps)
+            display: inline-block
+            vertical-align: middle
+            width: 27px
+            height: 27px
+            background-color: #FFF
+            line-height: 27px
+            text-align: center
+            border-radius: 50%
+            font-weight: 700 
+            margin-right: 12px  
+            font-size: 18px   
+        
+        img
+            display: inline-block
+            vertical-align: middle
+            margin-right: 8px
+            
+        span
+            display: inline
+            vertical-align: middle
+            
+.quote
+    padding: 25px
+    font-size: 14px
+    line-height: 1.7  
+    letter-spacing: 0.08em 
+    img
+        display: inline-block
+        vertical-align: baseline
+        margin-left: -12px
+        margin-bottom: 8px 
+    strong
+        font-size: 18px
+        color: #000    
+        font-weight: 400 

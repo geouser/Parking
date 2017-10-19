@@ -1,6 +1,7 @@
 aside
     background-color: #F5F5F5
     padding:    12px
+    min-height: 100% 
     
 .filtres
     p
@@ -86,5 +87,53 @@ aside
     pointer-events: none
 #map-canvas
     background-color: $grey
-    min-height: calc( 100% - 45px)  
+    height: calc( 100% - 45px)  
+    min-height: 500px 
     padding-top: 45px 
+
+
+.marker-info
+    padding: 20px 
+    border-bottom: 1px solid  $grey-border
+    border-radius: 5px 
+.marker-row
+    width: 260px
+    padding: 8px 0 
+    border-bottom: 1px solid  #e1e1e1
+    padding-left: 40px 
+    font-size: 12px 
+    background-repeat: no-repeat
+    background-position: 0 50% 
+    img
+        max-width: 80px !important
+        display: inline-block
+        vertical-align: middle 
+    span
+        display: inline-block
+        color: #666 
+        vertical-align: middle
+        line-height: 24px 
+        padding-right: 2px 
+    p
+        display: inline-block
+        vertical-align: middle
+        margin: 0
+        color: #000  
+        line-height: 18px
+    &--flex
+        display: flex
+        flex-wrap: no-wrap
+    &.mr-cost
+        background-image: url("../images/ic-cost.png")
+    &.mr-time
+        background-image: url("../images/ic-time.png")
+    &.mr-size
+        background-image: url("../images/ic-size.png")
+    &.mr-attendent
+        background-image: url("../images/ic-att.png")
+    &.mr-verified
+        background-image: url("../images/ic-verified.png")
+    &.mr-valvet
+        background-image: url("../images/ic-valvet.png")
+    &.mr-address
+        background-image: url("../images/ic-address.png")

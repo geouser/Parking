@@ -84,3 +84,66 @@
 			
 		.btn
 			max-width: 100% 
+			
+
+
+
+.schedule-table
+	width: 100%
+	font-family: $os 
+	margin-top: 15px 
+	
+	td,
+	th
+		border: 1px solid $grey-border
+		padding: 10px
+		vertical-align: baseline
+	
+	thead
+		font-size: 12px
+		
+		th
+			font-weight: 600 
+		
+	tbody
+		font-size: 11px
+		
+		td:first-child
+			font-weight: 600
+			font-size: 12px  
+			
+	.receipt-link
+		border: 1px solid $grey-border
+		border-radius: 3px
+		white-space: nowrap
+		padding: 3px 6px
+		color: $grey
+		
+		&:hover
+			text-decoration: none
+			background-color: $orange 
+			border-color: $orange
+			color: #fff
+			
+		&.disabled
+			pointer-events: none
+			
+
+	.status
+		border: 1px solid
+		border-radius: 3px
+		white-space: nowrap
+		padding: 3px 6px
+		color: #fff
+		
+		&.pending
+			background-color: $red
+			border-color: $red 
+			
+		&.reserved
+			background-color: $green
+			border-color: $green
+			
+		&.parked
+			background-color: $blue
+			border-color: $blue 

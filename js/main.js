@@ -152,6 +152,41 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                    Password form
+    ---------------------------*/
+    $('.password-form').on('change keyup', function(event) {
+        event.preventDefault();
+        var password = $(this).find('input[name="new-password"]');
+        var confirmation = $(this).find('input[name="confirm-password"]');
+
+        password.removeClass('not-valid valid');
+        confirmation.removeClass('not-valid valid');
+        $(this).find('.error').remove();
+
+        if ( password.val().length < password.attr('min') ) {
+            password.parent().append('<span class="error">Minimum '+password.attr('min')+' characters</span>');
+            password.addClass('not-valid');
+        } else {
+            password.addClass('valid');
+        }
+
+        if ( confirmation.val() != password.val() ) {
+            confirmation.parent().append('<span class="error">Passwords doesn\'t match</span>');
+            confirmation.addClass('not-valid');
+        } else {
+            confirmation.addClass('valid');
+        }
+
+        if ( ( password.val().length >= password.attr('min') ) && ( confirmation.val() == password.val() ) ) {
+            $(this).find('button').prop('disabled', false)
+        } else {
+            $(this).find('button').prop('disabled', true)
+        }
+    });
+
+
+
+    /*---------------------------
                                 jQuery UI accordion
     ---------------------------*/
     $('.accordion').accordion({

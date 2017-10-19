@@ -1,22 +1,21 @@
 .accordion
+	@extend .form-group
+
 	&__title
 		font-size: 16px
 		font-weight: 700
 		font-family: $os
-		padding-bottom: 8px
 		border-bottom: 1px solid $grey-border
-		padding-left: 30px
+		padding: 15px 10px 10px 30px
 		position: relative 
 		cursor: pointer
 		margin-bottom: 0
-		
-		&:not(:first-child)
-			margin-top: 20px 
+		text-transform: uppercase
 		
 		&:before
 			content: '+'
 			position: absolute
-			top: 12.5px
+			top: 27.5px
 			left: 15px
 			transform: translate(-50%, -50%)
 			font-size: 28px 

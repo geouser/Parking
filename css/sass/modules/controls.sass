@@ -70,50 +70,64 @@
 
 
 .input.file
-	position: relative
-	padding: 0!important
-
-	&:after
-		content: '';
-		width: 38px;
-		height: 38px;
-		border-radius: 6px
-		background-color: #fdbf2d
-		background-size: 20px;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-image: url(../images/upload.svg);
-		position: absolute;
-		top: 50%;
-		right: 21px;
-		-webkit-transform: translate(50%, -50%);
-		-ms-transform: translate(50%, -50%);
-		-o-transform: translate(50%, -50%);
-		transform: translate(50%, -50%);
-		pointer-events: none;
-
-	input[type="file"] 
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0
-		bottom: 0
-		z-index: 2;
-		opacity: 0;
-		cursor: pointer;
-
-		&::-webkit-file-upload-button
-			cursor: pointer;
-
-
-	span
-		+textEnd();
+	display: block
+	width: 100%
+	
+	.file-preview
+		display: flex
+			
+		.image_holder
+			width: 130px
+			height: 70px
+			border: 7px solid #D5D5D5
+			background-color: #F0F0F0 
+			background-image: url(../images/car-icon.png)
+			background-position: 50% 50%
+			background-repeat: no-repeat 
+			
+		.text
+			width: -webkit-calc(100% - 130px)
+			width: calc(100% - 130px)
+			padding-left: 15px 
+			line-height: 18px 
+			
+		.name_holder
+			display: block
+			color: $green
+			margin-top: 5px 
+			text-decoration: underline
+			
+	.file-button
+		margin-top: 10px
+		width: 130px
+		height: 30px
+		position: relative
+		overflow: hidden
 		display: block
-		height: 100%
-		padding: 0 55px 0 15px
-		text-align: left
+		
+		input
+			opacity: 0
+			position: absolute
+			z-index: 2 
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			cursor: pointer
+
+			&::-webkit-file-upload-button
+				cursor: pointer
+				
+		.placeholder
+			display: block
+			width: 100%
+			height: 100%
+			border-radius: 3px
+			background-color: #EEEEEE
+			position: relative
+			z-index: 1
+			text-align: center
+			line-height: 30px  
 		
 
 
@@ -196,15 +210,18 @@ select.form-control
 		padding-left: 10px 
 		
 	&.custom-radio &-indicator
-		width: 16px
-		height: 16px
+		width: 14px
+		height: 14px
 		border-radius: 50%
-		border: 1px solid $grey-border
+		box-shadow: 0 0 0 1px $grey-border
+		border: 4px solid #fff
 		background-color: transparent 
+		margin-left: 1px 
 		
 	&.custom-radio input:checked + &-indicator
-		background-color: $green 
-		border-color: $green
+		position: relative
+		background-color: $grey-border
+			
 		
 	&.custom-checkbox &-indicator
 		width: 16px
@@ -216,9 +233,7 @@ select.form-control
 		text-align: center  
 		
 	&.custom-checkbox input:checked + &-indicator
-		background-color: $green 
-		border-color: $green
-		color: #fff
+		color: $grey-border
 		position: relative
 		
 		&:before

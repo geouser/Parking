@@ -215,7 +215,7 @@
 											<div class="input-group">
 												<div class="input-group-addon">$</div>
 												<input type="number" class="form-control" name="price">
-											</div>	
+											</div>
 										</div>
 									</div>
 								</div>
@@ -240,6 +240,417 @@
 
 							<div class="form-group text-group">
 								<p>TIP: Each day is from 12:00am (midnight) to 12:00am (midnight). Overnight schedules must be created as two separate days, ending at midnight the first day and starting at midnight the next day.</p>
+							</div>
+
+
+							<div class="accordion">
+								<h3 class="accordion__title">TIME ZONE</h3>
+								<div class="accordion__content">
+									<div class="form-group">
+										<label class="label">Select timezone</label>
+										<select name="timezone" id="" class="form-control">
+											<option value="00:00 am">(GMT-08:00) Los Angeles, CA, United States</option>
+											<option value="01:00 am">01:00 am</option>
+											<option value="02:00 am">02:00 am</option>
+											<option value="03:00 am">03:00 am</option>
+											<option value="04:00 am">04:00 am</option>
+											<option value="05:00 am">05:00 am</option>
+										</select>
+									</div>
+								</div>
+
+								<h3 class="accordion__title">SPACE FEATURES</h3>
+								<div class="accordion__content">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Space Type</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<select name="space-type" id="" class="form-control">
+													<option disabled selected>Parking garage</option>
+													<option value="01:00 am">01:00 am</option>
+													<option value="02:00 am">02:00 am</option>
+													<option value="03:00 am">03:00 am</option>
+													<option value="04:00 am">04:00 am</option>
+													<option value="05:00 am">05:00 am</option>
+												</select>
+											</div>
+										</div>	
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Max Size</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<select name="max-size" id="" class="form-control">
+													<option disabled selected>Standart</option>
+													<option value="01:00 am">01:00 am</option>
+													<option value="02:00 am">02:00 am</option>
+													<option value="03:00 am">03:00 am</option>
+													<option value="04:00 am">04:00 am</option>
+													<option value="05:00 am">05:00 am</option>
+												</select>
+											</div>
+										</div>	
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">No. Parking Space</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<input type="number" class="form-control" name="no-parking-space">
+													<div class="input-group-addon">e.g 2</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Max Height</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<input type="text" class="form-control" name="max-height">
+													<div class="input-group-addon">e.g 6’8”</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+								</div>
+
+								<h3 class="accordion__title">FACILITY INFO</h3>
+								<div class="accordion__content">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Facility Name</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<input type="text" class="form-control" name="facility-name">
+											</div>
+										</div>	
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Facility Phone</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<input type="text" class="form-control" name="facility-phone">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Facility Email</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<input type="text" class="form-control" name="facility-email">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Payment options</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<label class="custom-control custom-radio">
+													<input type="radio" name="payment-option" value="option1">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Pay Attendent</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input type="radio" name="payment-option" value="option2">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">PayPal Payment</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Attendant</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" name="attendant" value="1">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Attendant present</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Tandem Parking</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" name="tandent-parking" value="1">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Require Leaving Key</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Gated</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" name="gated" value="1">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Security Gate Present</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<h3 class="accordion__title">VARIABLE PRICING</h3>
+								<div class="accordion__content">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Hourly</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="hourly[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="hourly[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Extra Hour Above 3 Hours</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="above_3[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="above_3[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Extra Hour Above 6 Hours</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="above_6[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="above_6[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Extra Hour Above 12 Hours</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="above_12[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="above_12[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Day parking</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="day_parking[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="day_parking[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">Monthly</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="monthly_parking[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="monthly_parking[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<h3 class="accordion__title">Additional services</h3>
+								<div class="accordion__content">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">1. Wash your car outside</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="clean-car-outslide[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="clean-car-outslide[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">2. Clean up and wash the inside of the car</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="clean-car-inside[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="clean-car-inside[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">3. Check tire pressures</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="check-pressure[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="check-pressure[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-sm-4">
+												<label class="col-form-label">4. Change your tires from summer to winter tires"</label>
+											</div>
+											<div class="col-12 col-sm-8">
+												<div class="input-group">
+													<div class="input-group-addon">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" name="change-tires[flag]" value="1">
+															<span class="custom-control-indicator"></span>
+														</label>
+													</div>
+													<input type="number" class="form-control" name="change-tires[price]">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> <!-- end accordion -->
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<label class="col-form-label">Parking Image</label>
+									</div>
+									<div class="col-12 col-sm-8">
+										<span class="input file">
+											<span class="file-preview">
+												<span class="image_holder"></span>
+												<span class="text">
+													<span class="tip_holder">*** Max file size: 5MB. Recommended file type: JPG.</span>
+													<span class="name_holder"></span>
+												</span>
+											</span>
+											<span class="file-button">
+												<span class="placeholder">Choose file</span>
+												<input type="file" name="parking-image" accept=".jpg,.png,.jpeg" required="">
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<label class="col-form-label">Parking space ownership</label>
+									</div>
+									<div class="col-12 col-sm-8">
+										<span class="input file">
+											<span class="file-preview">
+												<span class="image_holder"></span>
+												<span class="text">
+													<span class="tip_holder">*** Max file size: 5MB. Recommended file type: doc.</span>
+													<span class="name_holder"></span>
+												</span>
+											</span>
+											<span class="file-button">
+												<span class="placeholder">Choose file</span>
+												<input type="file" name="parking-ownership" accept=".doc,.docx,.pdf" required="">
+											</span>
+										</span>
+									</div>
+								</div>
 							</div>
 							
 

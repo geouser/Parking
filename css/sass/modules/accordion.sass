@@ -1,0 +1,29 @@
+.accordion
+	@extend .form-group
+
+	&__title
+		font-size: 16px
+		font-weight: 700
+		font-family: $os
+		border-bottom: 1px solid $grey-border
+		padding: 15px 10px 10px 30px
+		position: relative 
+		cursor: pointer
+		margin-bottom: 0
+		text-transform: uppercase
+		
+		&:before
+			content: '+'
+			position: absolute
+			top: 27.5px
+			left: 15px
+			transform: translate(-50%, -50%)
+			font-size: 28px 
+			font-family: Arial 
+		
+		&.ui-accordion-header-active		
+			&:before
+				content: '−'
+				
+	&__content
+		padding-top: 15px 

@@ -45,27 +45,46 @@ jQuery(document).ready(function($) {
                                   File input logic
     ---------------------------*/
     $('input[type=file]').each(function(index, el) {
+        var image_holder = $(this).parent().siblings('.file-preview').find('.image_holder');
+        var text_holder = $(this).parent().siblings('.file-preview').find('.name_holder');
         $(this).on('change', function(event) {
             event.preventDefault();
-            var placeholder = $(this).siblings('.placeholder');
         
             if ( this.files.length > 0 ) {
                 if ( this.files[0].size < 5000000 ) {
+
                     var filename = $(this).val().split('/').pop().split('\\').pop();
-                    if ( filename == '' ) {
-                        filename = placeholder.attr('data-label');
+                    text_holder.text(filename);
+                    var ext = getExtension(filename);
+                    if ( ext == 'jpg' || ext == 'png' || ext == 'jpeg' ) {
+                        var reader = new FileReader();
+                        reader.onload = function(frEvent) {
+                            image_holder.css({
+                                'background-image': 'url('+frEvent.target.result+')',
+                                'background-size': 'cover'
+                            });
+                        }
+                        reader.readAsDataURL(this.files[0]);    
                     }
-                    placeholder.text(filename);
+
                 } else {
+
                     alert('Maximum file size is 5Mb');
-                }    
+
+                }   
+
             } else {
-                placeholder.text( placeholder.attr('data-label') );
+                text_holder.text('');
+                image_holder.attr('style', '');
             }
             
         });
     });
 
+    function getExtension(filename) {
+        var extension = filename.substr( (filename.lastIndexOf('.') +1) );
+        return extension;
+    };
 
     /*---------------------------
                                   Schedule controls
@@ -130,6 +149,15 @@ jQuery(document).ready(function($) {
         }
     });
 
+
+
+    /*---------------------------
+                                jQuery UI accordion
+    ---------------------------*/
+    $('.accordion').accordion({
+        heightStyle: "content",
+        collapsible: true,
+    });
 
     
     /*---------------------------

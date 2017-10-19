@@ -285,7 +285,9 @@ jQuery(document).ready(function($) {
         });
     });
 
-
+    $( function() {
+        $( ".tabs" ).tabs();
+    } );
 
     $('.map-controls__change').click(function(){
         $('#pac-input').toggleClass('open');

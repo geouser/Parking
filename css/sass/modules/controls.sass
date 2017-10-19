@@ -20,6 +20,35 @@
 		height: 50px
 		line-height: 50px
 
+
+
+.btn
+	display: inline-block
+	font-weight: 400
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	user-select: none
+	border: 1px solid transparent
+	padding: .5rem 2rem
+	font-size: 1rem
+	line-height: 1.25
+	border-radius: .25rem
+	transition: all .15s ease-in-out
+	cursor: pointer
+	text-decoration: none!important
+	
+	&--green
+		color: #fff
+		background-color: $green
+		border-color: $green 
+		
+	&--grey
+		color: $grey
+		background-color: #D5D5D5
+		border-color: #D5D5D5 
+		
+
 /* ------------------------------------ */
 /*  SLICK ARROWS  */
 .slick-arrow,
@@ -149,6 +178,10 @@
 		padding: 4.5px 0 
 		
 
+.button-group
+	margin-bottom: 0
+	padding-top: 20px  
+
 .form-control
 	display: block
 	width: 100%
@@ -175,6 +208,9 @@ select.form-control
 		border: 1px solid $grey-border
 		line-height: 28px 
 		white-space: nowrap
+		display: flex
+		align-items: center
+		
 		
 		&:first-child
 			border-radius: 3px 0 0 3px

@@ -246,49 +246,93 @@ jQuery(document).ready(function($) {
 
 
 
+    $('.map-controls__change').click(function(){
+        $('#pac-input').toggleClass('open');
+    });
     /*---------------------------
                                   Google map init
     ---------------------------*/
-    var map;
-    function googleMap_initialize() {
-        var lat = $('#map_canvas').data('lat');
-        var long = $('#map_canvas').data('lng');
+    var locations = [
+        ['London Eye', 51.503510, -0.119434, 5],
+        ['Charing Cross', 51.507383, -0.127202, 4],
+        ['Leicester Square', 51.511336, -0.128361, 3]
+    ];
 
-        var mapCenterCoord = new google.maps.LatLng(lat, long);
-        var mapMarkerCoord = new google.maps.LatLng(lat, long);
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 18,
+        center: new google.maps.LatLng(51.530616, -0.123125),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false
+    });
 
-        var styles = [];
+    // Create the search box and link it to the UI element.
+    var input = (document.getElementById('pac-input'));
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    var searchBox = new google.maps.places.SearchBox((input));
 
-        var mapOptions = {
-            center: mapCenterCoord,
-            zoom: 16,
-            //draggable: false,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
+    // Bias the SearchBox results towards current map's viewport.
+    map.addListener('bounds_changed', function() {
+        searchBox.setBounds(map.getBounds());
+    });
 
-        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    searchBox.addListener('places_changed', function() {
+        var places = searchBox.getPlaces();
 
-        var styledMapType=new google.maps.StyledMapType(styles,{name:'Styled'});
-        map.mapTypes.set('Styled',styledMapType);
-        map.setMapTypeId('Styled');
+        if (places.length === 0) {
+            return;
+        }
 
-        var markerImage = new google.maps.MarkerImage('images/location.png');
-        var marker = new google.maps.Marker({
-            icon: markerImage,
-            position: mapMarkerCoord, 
-            map: map,
-            title:"Site Title"
+        var bounds = new google.maps.LatLngBounds();
+        places.forEach(function(place) {
+            if (!place.geometry) {
+                console.log("Returned place contains no geometry");
+                return;
+            }
+            if (place.geometry.viewport) {
+                // Only geocodes have viewport.
+                bounds.union(place.geometry.viewport);
+            } else {
+                bounds.extend(place.geometry.location);
+            }
         });
-        
-        $(window).resize(function (){
-            map.setCenter(mapCenterCoord);
+        map.fitBounds(bounds);
+        var newAddress = $('#pac-input').val();
+        $('#new-location').val(newAddress);
+        $('#pac-input').removeClass('open');
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+    var markers = new Array();
+
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
         });
+
+        markers.push(marker);
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
     }
 
-    if ( exist( '#map_canvas' ) ) {
-        googleMap_initialize();
+    function AutoCenter() {
+        //  Create a new viewpoint bound
+        var bounds = new google.maps.LatLngBounds();
+        //  Go through each...
+        $.each(markers, function(index, marker) {
+            bounds.extend(marker.position);
+        });
+        //  Fit these bounds to the map
+        map.fitBounds(bounds);
     }
+    AutoCenter();
+
 
 }); // end file

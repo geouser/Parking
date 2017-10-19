@@ -60,12 +60,61 @@
 					<div class="col col-md-3">
 						<aside>
 							<div class="filtres">
-								sdcsd
+								<p>Filters</p>
+								<div class="form-group">
+									<select name="countru" id="" class="form-control">
+										<option value="" disabled selected>All sizes</option>
+										<option value="USA">10*10</option>
+										<option value="USA">10*20</option>
+									</select>
+								</div>
+								<p class="filtres__title">Length of Stay</p>
+								<label class="filtres__filter custom-control custom-checkbox">
+									<input type="checkbox" name="attendant" value="1">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Hourly / Flat</span>
+								</label>
+								<label class="filtres__filter custom-control custom-checkbox">
+									<input type="checkbox" name="attendant" value="1">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Monthly Micro Share</span>
+								</label>
+								<label class="filtres__filter custom-control custom-checkbox">
+									<input type="checkbox" name="attendant" value="1">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Monthly Dedicated</span>
+								</label>
+								<label class="filtres__filter custom-control custom-checkbox">
+									<input type="checkbox" name="attendant" value="1">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">No public place like  Mall, market</span>
+								</label>
+								<label class="filtres__filter custom-control custom-checkbox">
+									<input type="checkbox" name="attendant" value="1">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Only Verified Parking</span>
+								</label>
+								<label class="filtres__filter custom-control custom-checkbox">
+									<input type="checkbox" name="attendant" value="1">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Minimum Charges</span>
+								</label>
 							</div>
 						</aside>
 					</div>
 					<div class="col col-md-9">
-						csdc
+						<div class="row align-items-end map-controls">
+							<div class="col-md-8">
+								<input id="new-location" class="your-input" class="controls" type="text" placeholder="Your Address: Longos, Malolos, Bulacan, Philippines">
+							</div>
+							<div class="col-md-4">
+								<p class="map-controls__change">Change your address</p>
+							</div>
+						</div>
+
+						<input id="pac-input" class="controls" type="text" placeholder="Write down your address" name="map-location">
+
+						<div class="container" id="map-canvas"></div>
 					</div>
 				</div>
 			</div>
@@ -92,7 +141,7 @@
 		<div id="modal-popup" class="fncb-hide zoom-anim-dialog popup"></div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk&libraries=places&sensor=false"></script>
 
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>

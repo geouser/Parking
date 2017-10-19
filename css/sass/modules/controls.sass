@@ -230,7 +230,9 @@ select.form-control
 
 .custom-control
 	display: inline-flex
-	align-items: center
+	align-items: flex-start
+	flex-wrap: wrap 
+	width: 100% 
 	margin-right: 20px
 	cursor: pointer
 	padding: 4.5px 0 
@@ -244,6 +246,7 @@ select.form-control
 		
 	&-indicator + &-description
 		padding-left: 10px 
+		max-width: calc(100% - 16px) 
 		
 	&.custom-radio &-indicator
 		width: 14px
@@ -267,6 +270,7 @@ select.form-control
 		font-size: 10px
 		line-height: 12px
 		text-align: center  
+		margin-top: 2px 
 		
 	&.custom-checkbox input:checked + &-indicator
 		color: $grey-border

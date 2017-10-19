@@ -88,7 +88,8 @@
 
 
 
-.schedule-table
+.schedule-table,
+.parking-table
 	width: 100%
 	font-family: $os 
 	margin-top: 15px 
@@ -108,9 +109,12 @@
 	tbody
 		font-size: 11px
 		
+
+.schedule-table
+	tbody	
 		td:first-child
 			font-weight: 600
-			font-size: 12px  
+			font-size: 12px
 			
 	.receipt-link
 		border: 1px solid $grey-border
@@ -147,3 +151,23 @@
 		&.parked
 			background-color: $blue
 			border-color: $blue 
+			
+
+.parking-table
+	thead
+		font-size: 14px
+		 
+	tbody
+		font-size: 13px 
+		
+		td
+			vertical-align: top
+			
+	.btn
+		padding: 5px 10px
+		font-size: inherit 
+		
+	img
+		display: block
+		max-width: 100% 
+		min-width: 100px 

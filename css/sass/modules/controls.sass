@@ -259,12 +259,15 @@ textarea.form-control
 .custom-control
 	display: inline-flex
 	align-items: flex-start
-	flex-wrap: wrap 
-	width: 100% 
 	margin-right: 20px
 	cursor: pointer
 	padding: 4.5px 0 
 	margin-bottom: 0 
+	
+	&.block
+		width: 100%
+		flex-wrap: wrap
+		margin-right: 0 
 	
 	&:last-child
 		margin-right: 0
@@ -275,6 +278,7 @@ textarea.form-control
 	&-indicator + &-description
 		padding-left: 10px 
 		max-width: calc(100% - 16px) 
+		line-height: 21px 
 		
 	&.custom-radio &-indicator
 		width: 14px
@@ -284,6 +288,8 @@ textarea.form-control
 		border: 4px solid #fff
 		background-color: transparent 
 		margin-left: 1px 
+		margin-top: 2.5px
+		margin-bottom: 2.5px  
 		
 	&.custom-radio input:checked + &-indicator
 		position: relative
@@ -298,7 +304,8 @@ textarea.form-control
 		font-size: 10px
 		line-height: 12px
 		text-align: center  
-		margin-top: 2px 
+		margin-top: 2.5px
+		margin-bottom: 2.5px  
 		
 	&.custom-checkbox input:checked + &-indicator
 		color: $grey-border

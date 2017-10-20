@@ -137,6 +137,28 @@ aside
         background-image: url("../images/ic-valvet.png")
     &.mr-address
         background-image: url("../images/ic-address.png")
+    &.mr-price
+        background-image: url("../images/ic-dollar.png")
+    &.mr-calendar
+        background-image: url("../images/ic-calendar.png")
+    &.mr-price-round
+        background-image: url("../images/ic-dollar-round.png")
         
 .parking-labels
     margin-top: 12px 
+    
+.form-group--date
+    position: relative
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        right: 7px
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 20px
+        height: 20px
+        background-repeat: no-repeat
+        background-size: 100% 100%    
+        background-image: url("../images/ic-calendar.png")

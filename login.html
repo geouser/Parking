@@ -57,72 +57,42 @@
 
 		<!-- //////////////////////////////////////////////////////////////////////// -->
 		
-		<section class="add-parking">
+		<section>
 			<div class="container">
-				<div class="row">
-
-					<div class="col-12 col-lg-3">
-						<div class="sidebar">
-							<div class="sidebar-menu">
-								<p class="sidebar-menu-title">Dashbord</p>
-								<nav>
-									<ul>
-										<li class="menu-item"><a href="#">My parking space</a></li>
-										<li class="menu-item"><a href="#">Parking Schedule/History</a></li>
-										<li class="menu-item"><a href="#">Account Info</a></li>
-										<li class="menu-item current-menu-item"><a href="#">Change Password</a></li>
-									</ul>
-								</nav>	
-							</div>
-							
+				
+				<div class="login-box">
+					<form action="">
+						<div class="form-group">
+							<label for="" class="label">Username *</label>
+							<input type="text" class="form-control" name="username" required="">
 						</div>
-					</div>
-
-					<div class="col-12 col-lg-9">
-
-						<!-- Map will be here -->
-
-						<div class="block-title">
-							<h2>Change password</h2>
+						<div class="form-group">
+							<label for="" class="label">Password *</label>
+							<input type="password" class="form-control" name="password" required="">
 						</div>
+						<div class="form-group">
+							<a href="password-reset.html">Forget password?</a>
+						</div>
+						<div class="form-group mb-0">
+							<button class="btn btn--green btn--full">
+								<i class="fa fa-sign-in" aria-hidden="true"></i>
+								Sign in
+							</button>
+						</div>
+						<div class="form-group text-center mb-0">
+							<span class="text-devider">or</span>
+						</div>
+						<div class="form-group mb-0">
+							<button class="btn btn--full btn--facebook">
+								<i class="fa fa-facebook-square" aria-hidden="true"></i>
+								Log in with Facebook
+							</button>
+						</div>
+					</form>
+				</div> <!-- end login-box -->
 
-						<p>For security reasons, passwords must be six or more characters in length. For a secure password, we recommend that it contain at least one uppercase letter, one lowercase letter and one number.</p>
-
-						<form action="" class="password-form">
-							<div class="form-group">
-								<div class="row">
-									<div class="col-12 col-sm-4">
-										<label class="col-form-label">New Password*</label>
-									</div>
-									<div class="col-12 col-sm-5 col-md-4">
-										<input type="password" class="form-control" name="new-password" required="" min="6">
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="row">
-									<div class="col-12 col-sm-4">
-										<label class="col-form-label">Confirm password</label>
-									</div>
-									<div class="col-12 col-sm-5 col-md-4">
-										<input type="password" class="form-control" name="confirm-password" required="">
-									</div>
-								</div>
-							</div>
-
-							<div class="button-group">
-								<button class="btn btn--green">Save</button>
-								<a href="#" class="btn btn--grey">Cancel</a>
-							</div>
-						</form>
-
-						
-
-					</div>
-
-				</div>
-			</div>	
-		</section> <!-- end add-parking -->
+			</div>
+		</section>
 		
 
 

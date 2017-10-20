@@ -57,72 +57,68 @@
 
 		<!-- //////////////////////////////////////////////////////////////////////// -->
 		
-		<section class="add-parking">
+		<section>
 			<div class="container">
-				<div class="row">
-
-					<div class="col-12 col-lg-3">
-						<div class="sidebar">
-							<div class="sidebar-menu">
-								<p class="sidebar-menu-title">Dashbord</p>
-								<nav>
-									<ul>
-										<li class="menu-item"><a href="#">My parking space</a></li>
-										<li class="menu-item"><a href="#">Parking Schedule/History</a></li>
-										<li class="menu-item"><a href="#">Account Info</a></li>
-										<li class="menu-item current-menu-item"><a href="#">Change Password</a></li>
-									</ul>
-								</nav>	
-							</div>
-							
-						</div>
+				
+				<div class="signup-box">
+					<div class="block-title">
+						<h2>New user? Join for free!</h2>
 					</div>
-
-					<div class="col-12 col-lg-9">
-
-						<!-- Map will be here -->
-
-						<div class="block-title">
-							<h2>Change password</h2>
+					<form action="" class="password-form">
+						<div class="form-group">
+							<label class="custom-control custom-radio">
+								<input type="radio" name="role" value="car-owner">
+								<span class="custom-control-indicator"></span>
+								<span class="custom-control-description">Car Owner</span>
+							</label>
+							<label class="custom-control custom-radio">
+								<input type="radio" name="role" value="parking-owner">
+								<span class="custom-control-indicator"></span>
+								<span class="custom-control-description">Parking Owner</span>
+							</label>
 						</div>
+						<div class="form-group">
+							<label for="" class="label">First name *</label>
+							<input type="text" class="form-control" name="first-name" required="">
+						</div>
+						<div class="form-group">
+							<label for="" class="label">Surname *</label>
+							<input type="text" class="form-control" name="second-name" required="">
+						</div>
+						<div class="form-group">
+							<label for="" class="label">Email address *</label>
+							<input type="email" class="form-control" name="email" required="">
+						</div>
+						<div class="form-group">
+							<label for="" class="label">Username *</label>
+							<input type="text" class="form-control" name="username" required="">
+						</div>
+						<div class="form-group">
+							<label for="" class="label">Password *</label>
+							<input type="password" class="form-control" name="new-password" required="" min="6">
+						</div>
+						<div class="form-group">
+							<label for="" class="label">Confirm password *</label>
+							<input type="password" class="form-control" name="confirm-password" required="">
+						</div>
+						<div class="form-group">
+							<label class="custom-control custom-checkbox block">
+								<input type="checkbox" name="terms-accept" value="1">
+								<span class="custom-control-indicator"></span>
+								<span class="custom-control-description">I agree with <a href="#">Terms and condition</a> of park ko park mo</span>
+							</label>
+						</div>
+						<div class="form-group mb-0">
+							<button class="btn btn--green btn--full">
+								<i class="fa fa-user-plus" aria-hidden="true"></i>
+								Sign up
+							</button>
+						</div>
+					</form>
+				</div> <!-- end login-box -->
 
-						<p>For security reasons, passwords must be six or more characters in length. For a secure password, we recommend that it contain at least one uppercase letter, one lowercase letter and one number.</p>
-
-						<form action="" class="password-form">
-							<div class="form-group">
-								<div class="row">
-									<div class="col-12 col-sm-4">
-										<label class="col-form-label">New Password*</label>
-									</div>
-									<div class="col-12 col-sm-5 col-md-4">
-										<input type="password" class="form-control" name="new-password" required="" min="6">
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="row">
-									<div class="col-12 col-sm-4">
-										<label class="col-form-label">Confirm password</label>
-									</div>
-									<div class="col-12 col-sm-5 col-md-4">
-										<input type="password" class="form-control" name="confirm-password" required="">
-									</div>
-								</div>
-							</div>
-
-							<div class="button-group">
-								<button class="btn btn--green">Save</button>
-								<a href="#" class="btn btn--grey">Cancel</a>
-							</div>
-						</form>
-
-						
-
-					</div>
-
-				</div>
-			</div>	
-		</section> <!-- end add-parking -->
+			</div>
+		</section>
 		
 
 

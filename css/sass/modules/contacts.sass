@@ -1,0 +1,26 @@
+.contacts-list
+	margin-bottom: 0
+	
+	&__item
+		display: flex
+		
+		a
+			color: inherit
+		
+		&:not(:last-child)
+			margin-bottom: 15px
+			 
+		span
+			width: -webkit-calc(100% - 30px)
+			width: calc(100% - 30px)
+			padding: 4.5px 0 4.5px 15px
+			
+		.fa
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			background-color: $green
+			color: #fff 
+			display: flex
+			align-items: center
+			justify-content: center

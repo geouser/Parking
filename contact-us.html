@@ -57,72 +57,62 @@
 
 		<!-- //////////////////////////////////////////////////////////////////////// -->
 		
-		<section class="add-parking">
+		<section>
 			<div class="container">
+
+				<div class="block-title">
+					<h1>Contact us</h1>
+				</div>
+
+				<p>To Contact with us please fill up the following form.</p>
+
 				<div class="row">
-
-					<div class="col-12 col-lg-3">
-						<div class="sidebar">
-							<div class="sidebar-menu">
-								<p class="sidebar-menu-title">Dashbord</p>
-								<nav>
-									<ul>
-										<li class="menu-item"><a href="#">My parking space</a></li>
-										<li class="menu-item"><a href="#">Parking Schedule/History</a></li>
-										<li class="menu-item"><a href="#">Account Info</a></li>
-										<li class="menu-item current-menu-item"><a href="#">Change Password</a></li>
-									</ul>
-								</nav>	
-							</div>
-							
-						</div>
-					</div>
-
-					<div class="col-12 col-lg-9">
-
-						<!-- Map will be here -->
-
-						<div class="block-title">
-							<h2>Change password</h2>
-						</div>
-
-						<p>For security reasons, passwords must be six or more characters in length. For a secure password, we recommend that it contain at least one uppercase letter, one lowercase letter and one number.</p>
-
-						<form action="" class="password-form">
+					<div class="col-md-6">
+						<form action="">
 							<div class="form-group">
-								<div class="row">
-									<div class="col-12 col-sm-4">
-										<label class="col-form-label">New Password*</label>
-									</div>
-									<div class="col-12 col-sm-5 col-md-4">
-										<input type="password" class="form-control" name="new-password" required="" min="6">
-									</div>
-								</div>
+								<label for="" class="label">Your Name *</label>
+								<input type="text" name="name" class="form-control" required="">
 							</div>
 							<div class="form-group">
-								<div class="row">
-									<div class="col-12 col-sm-4">
-										<label class="col-form-label">Confirm password</label>
-									</div>
-									<div class="col-12 col-sm-5 col-md-4">
-										<input type="password" class="form-control" name="confirm-password" required="">
-									</div>
-								</div>
+								<label for="" class="label">Your Email Address *</label>
+								<input type="email" name="email" class="form-control" required="">
 							</div>
-
+							<div class="form-group">
+								<label for="" class="label">Subject</label>
+								<input type="text" name="subject" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="" class="label">Message *</label>
+								<textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+							</div>
 							<div class="button-group">
-								<button class="btn btn--green">Save</button>
-								<a href="#" class="btn btn--grey">Cancel</a>
+								<button class="btn btn--green btn--fa">
+									<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+									Send
+								</button>
 							</div>
 						</form>
-
-						
-
 					</div>
-
+					<div class="col-md-6">
+						<ul class="contacts-list">
+							<li class="contacts-list__item">
+								<i class="fa fa-home" aria-hidden="true"></i>
+								<span>Level 3, 2 Elizabeth, Melbourne</span>
+							</li>
+							<li class="contacts-list__item">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<span><a href="mailto:info@example.com">info@example.com</a></span>
+							</li>
+							<li class="contacts-list__item">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								<span><a href="tel:034 7865 9087">034 7865 9087</a></span>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>	
-		</section> <!-- end add-parking -->
+
+			</div>
+		</section>
 		
 
 

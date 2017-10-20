@@ -170,18 +170,18 @@ jQuery(document).ready(function($) {
             password.addClass('valid');
         }
 
-        if ( confirmation.val() != password.val() ) {
+        if ( password.val().length >= password.attr('min') && confirmation.val() == password.val() ) {
+            confirmation.addClass('valid');
+        } else {
             confirmation.parent().append('<span class="error">Passwords doesn\'t match</span>');
             confirmation.addClass('not-valid');
-        } else {
-            confirmation.addClass('valid');
         }
 
-        if ( ( password.val().length >= password.attr('min') ) && ( confirmation.val() == password.val() ) ) {
+        /*if ( ( password.val().length >= password.attr('min') ) && ( confirmation.val() == password.val() ) ) {
             $(this).find('button').prop('disabled', false)
         } else {
             $(this).find('button').prop('disabled', true)
-        }
+        }*/
     });
 
 

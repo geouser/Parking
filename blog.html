@@ -19,10 +19,11 @@
     
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
-        <header class="header">
+        
+                <header class="header">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-sm-4">
+                    <div class="col-7 col-lg-4">
                         <a href="index.html" class="header-logo">
                             <img src="images/logo-grey.svg" alt="Park KoPark Mo">
                         </a>
@@ -33,26 +34,58 @@
                         <a href="signup.html">Sign Up</a> / <a href="login.html">Sign in</a>
                     </div>
 
-                    <div class="col-sm-8 text-lg-right">
+                    <!--
+                    <div class="profile-controls">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <a href="#">John Doe</a>
+                    </div>
+                    -->
+
+                    <div class="col-lg-8 text-lg-right">
                         <nav class="header-menu">
                             <ul>
-                                <li class="menu-item menu-item-home current-menu-item"><a href="index">Home</a></li>
+                                <li class="menu-item menu-item-home current-menu-item"><a href="index.html">Home</a></li>
                                 <li class="menu-item"><a href="about.html">About-us</a></li>
-                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                <li class="menu-item"><a href="contact-us.html">Contact</a></li>
                                 <li class="menu-item"><a href="#">Guidline</a></li>
-                                <li class="menu-item"><a href="#">Terms and conditions</a></li>
+                                <li class="menu-item"><a href="terms.html">Terms and conditions</a></li>
                             </ul>
                         </nav>
                     </div>
+
+                    <button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
                 </div>
             </div><!-- end wrapper -->
         </header><!-- end header -->
+
+        <div class="mobile-menu">
+            <div class="login-controls">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="signup.html">Sign Up</a> / <a href="login.html">Sign in</a>
+            </div>
+
+            <!--
+            <div class="profile-controls">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">John Doe</a>
+            </div>
+            -->
+
+            <nav class="mobile-nav">
+                <ul>
+                    <li class="menu-item menu-item-home current-menu-item"><a href="index">Home</a></li>
+                    <li class="menu-item"><a href="about.html">About-us</a></li>
+                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    <li class="menu-item"><a href="#">Guidline</a></li>
+                    <li class="menu-item"><a href="#">Terms and conditions</a></li>
+                </ul>
+            </nav>
+        </div>
         
-        <button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>  
 
         <section class="section">
             <div class="container">
@@ -91,7 +124,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-12 col-md-6 text-lg-left text-center">
+                    <div class="col-12 col-md-6 text-md-left text-center">
                         <p class="copyright">Copyright@ 2015 Park Ko Park Mo. All Rights Reserved</p>
                     </div>
                     <div class="col-12 col-md-6 text-md-right text-center">

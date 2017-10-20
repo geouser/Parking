@@ -3,6 +3,17 @@
 	border-bottom: 1px solid $grey-border
 	margin-bottom: 30px 
 	
+	@media (max-width: 991px)
+		padding: 15px 0
+		
+	@media (max-width: 767px)
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 5 
+		background-color: #fff 
+	
 	.container
 		position: relative
 		
@@ -15,6 +26,12 @@
 		padding: 5px 10px 5px 30px
 		text-transform: uppercase
 		font-size: 12px 
+		
+		@media (max-width: 991px)
+			top: -15px
+			
+		@media (max-width: 767px)
+			display: none
 		
 		a
 			color: inherit
@@ -38,6 +55,15 @@
 		max-width: 100%
 		width: 210px
 		
+		@media (max-width: 991px)
+			display: block
+			margin-left: 0
+			margin-right: auto 
+			margin-bottom: 15px 
+			
+		@media (max-width: 767px)
+			margin-bottom: 0 
+		
 		img
 			display: block
 			max-width: 100% 
@@ -52,6 +78,13 @@
 	position: relative
 	border-radius: 4px
 	font-size: 12px 
+	
+	@media (max-width: 991px)
+		display: block
+		width: 100%
+		
+	@media (max-width: 767px)
+		display: none
 	
 	ul
 		display: flex
@@ -91,5 +124,79 @@
 
 
 .menu-button
-	@media (min-width: 991px)
+	&:focus,
+	&:active
+		outline: none
+		box-shadow: none
+		
+	@media (min-width: 768px)
 		display: none
+		
+	@media (max-width: 767px)
+		position: absolute
+		top: 50%
+		right: 15px
+		transform: translateY(-50%)
+		background-color: $green 
+		width: 32px
+		height: 32px
+		border-radius: 3px
+		
+		
+
+.mobile-menu
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	width: 220px
+	background-color: #F4F2F3
+	padding: 20px 0 
+	z-index: 20 
+	transition: all 0.3s ease
+	overflow: auto
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75)
+	transform: translateX(-100%)
+	visibility: hidden
+	opacity: 0
+	
+	&.is-active
+		transform: translateX(0)
+		visibility: visible
+		opacity: 1
+	
+	.login-controls,
+	.profile-controls
+		text-align: center
+		padding: 0 15px
+		margin-bottom: 20px
+		color: $grey-dark
+		
+		a
+			color: inherit
+			text-transform: uppercase
+			
+
+.mobile-nav
+	ul
+		margin-bottom: 0
+		
+	.menu-item
+		list-style: none 
+		
+		a
+			display: block
+			padding: 10px 15px
+			color: $grey-dark
+			text-align: center
+			border-bottom: 1px solid $grey-border
+			
+		&:first-child
+			a
+				border-top: 1px solid $grey-border
+
+		&.current-menu-item
+			a
+				background-color: $green
+				color: #fff
+				border-color: $green 

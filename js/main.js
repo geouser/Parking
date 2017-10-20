@@ -204,6 +204,8 @@ jQuery(document).ready(function($) {
                                 DatePicker
     ---------------------------*/
     $('.datepicker-input').datepicker();
+
+    
     /*---------------------------
                                 PAGE ANCHORS
     ---------------------------*/
@@ -220,7 +222,7 @@ jQuery(document).ready(function($) {
     $('.js-toggle-menu').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
-        $(this).siblings('header').toggleClass('open');
+        $('.mobile-menu').toggleClass('is-active');
     });
 
 

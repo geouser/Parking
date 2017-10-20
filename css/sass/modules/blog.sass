@@ -1,5 +1,7 @@
 .page-title
     width: 100% 
+    @media (max-width: 599px)
+        text-align: center
     .row
         width: 100% 
         border-bottom: 1px solid #999
@@ -10,11 +12,15 @@
             border: none
             margin-bottom: 0 
             padding-bottom: 0 
+            @media (max-width: 767px)
+                margin-bottom: 10px 
         & > div
             padding-left: 0
             padding-right: 0
             &:last-child
-                text-align: right 
+                text-align: right
+                @media (max-width: 599px)
+                    text-align: center 
     a[href^="tel"]
         font-size: 18px 
         transition: all .2s
@@ -30,6 +36,11 @@
         padding-bottom: 10px
         border-bottom: 1px solid #999
         margin-bottom:  30px   
+        @media (max-width: 767px)
+            font-size: 18px 
+        @media (max-width: 599px)
+            font-size: 16px 
+            text-align: center
     h2
         color: #000
         font-size: 16px   
@@ -40,13 +51,18 @@
         span
             display: inline-block
             vertical-align: middle
+            
+    @media (max-width: 767px)
+        .btn
+            display: block
+            margin: 10px auto 
 a[href^="tel"]
     img
         width: 22px
         margin-right: 16px   
+        
 article
-    font-size: 14px
-    line-height: 30px
+    line-height: 2.1
     color: #666666   
     letter-spacing: .08em
     

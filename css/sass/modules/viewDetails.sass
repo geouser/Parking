@@ -1,10 +1,17 @@
 .parkingDetails
     padding-right: 40px 
+    @media (max-width: 767px)
+        padding-right: 15px 
     .marker-row
         width: 100% 
         padding-top: 7px
         padding-bottom: 7px 
         padding-left: 0 
+        @media (max-width: 767px)
+            padding-top: 5px
+            padding-bottom: 5px  
+            span
+                line-height: 1.4 
         .row  
             &> div:first-child
                 padding-left: 55px
@@ -14,6 +21,9 @@
             &> div:last-child
                 span
                     color: #000
+            @media (max-width: 767px)
+                &>div
+                    padding-left: 50px !important 
         .form-group
             margin-bottom: 0
             padding-left: 0 !important  
@@ -28,6 +38,12 @@
         font-weight:    700
     .form-group
         margin-bottom:  10px 
+    @media (max-width: 767px)
+        line-height: normal
+        margin-bottom: 0px
+        .custom-control
+            padding: 2px 0
+            line-height: normal  
         
 .datepicker-input
     width: 100% 

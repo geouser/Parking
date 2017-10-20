@@ -2,7 +2,8 @@ aside
     background-color: #F5F5F5
     padding:    12px
     min-height: 100% 
-    
+    @media (max-width: 991px)
+        margin-bottom: 20px 
 .filtres
     p
         margin-bottom: 20px 
@@ -71,6 +72,8 @@ aside
 .map-controls
     height: 45px 
     padding-bottom: 15px
+    @media (max-width: 767px)
+        height: auto 
     div:last-child
         text-align: right
     &__change
@@ -83,13 +86,29 @@ aside
         cursor: pointer
         color: #333
         font-size: 14px 
+        @media (max-width: 500px)
+            font-size: 12px 
+        @media (max-width: 400px)
+            font-size: 11px
 #new-location
     pointer-events: none
+    @media (max-width: 767px)
+        font-size: 14px 
+    @media (max-width: 500px)
+        font-size: 12px 
+    @media (max-width: 400px)
+        font-size: 11px
 #map-canvas
     background-color: $grey
     height: calc( 100% - 45px)  
     min-height: 500px 
     padding-top: 45px 
+    @media (max-width: 767px)
+        height: 400px
+        min-height: 400px  
+    @media (max-width: 400px)
+        height: 350px
+        min-height: 350px  
 
 
 .marker-info
@@ -104,6 +123,14 @@ aside
     font-size: 12px 
     background-repeat: no-repeat
     background-position: 0 50% 
+    @media (max-width: 767px)
+        padding: 4px 4px 4px 30px
+        font-size: 11px  
+        background-size: 16px auto
+    @media (max-width: 400px)
+        padding: 2px 4px 2px 25px
+        font-size: 10px  
+        background-size: 14px auto 
     img
         max-width: 80px !important
         display: inline-block
@@ -146,7 +173,10 @@ aside
         
 .parking-labels
     margin-top: 12px 
-    
+    @media (max-width: 500px)
+        .btn
+            display: block
+            margin: 4px auto 
 .form-group--date
     position: relative
     &:after

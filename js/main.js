@@ -200,7 +200,10 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $( ".tabs" ).tabs();
 
-    
+     /*---------------------------
+                                DatePicker
+    ---------------------------*/
+    $('.datepicker-input').datepicker();
     /*---------------------------
                                 PAGE ANCHORS
     ---------------------------*/
@@ -289,6 +292,9 @@ jQuery(document).ready(function($) {
         $( ".tabs" ).tabs();
     } );
 
+
+
+
     $('.map-controls__change').click(function(){
         $('#pac-input').toggleClass('open');
     });
@@ -328,89 +334,94 @@ jQuery(document).ready(function($) {
         }, 51.511336, -0.128361, 3]
     ];
 
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 18,
-        center: new google.maps.LatLng(51.530616, -0.123125),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false
-    });
+    function googleMap_initialize() {
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+            zoom: 18,
+            center: new google.maps.LatLng(51.530616, -0.123125),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false
+        });
 
-    // Create the search box and link it to the UI element.
-    var input = (document.getElementById('pac-input'));
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-    var searchBox = new google.maps.places.SearchBox((input));
+        // Create the search box and link it to the UI element.
+        var input = (document.getElementById('pac-input'));
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        var searchBox = new google.maps.places.SearchBox((input));
 
-    // Bias the SearchBox results towards current map's viewport.
-    map.addListener('bounds_changed', function() {
-        searchBox.setBounds(map.getBounds());
-    });
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+        });
 
-    searchBox.addListener('places_changed', function() {
-        var places = searchBox.getPlaces();
+        searchBox.addListener('places_changed', function() {
+            var places = searchBox.getPlaces();
 
-        if (places.length === 0) {
-            return;
-        }
-
-        var bounds = new google.maps.LatLngBounds();
-        places.forEach(function(place) {
-            if (!place.geometry) {
-                console.log("Returned place contains no geometry");
+            if (places.length === 0) {
                 return;
             }
-            if (place.geometry.viewport) {
-                // Only geocodes have viewport.
-                bounds.union(place.geometry.viewport);
-            } else {
-                bounds.extend(place.geometry.location);
-            }
-        });
-        map.fitBounds(bounds);
-        var newAddress = $('#pac-input').val();
-        $('#new-location').val(newAddress);
-        $('#pac-input').removeClass('open');
-    });
 
-    var infowindow = new google.maps.InfoWindow();
-
-    var marker, i;
-    var markers = new Array();
-
-    for (i = 0; i < locations.length; i++) {
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function(place) {
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+            });
+            map.fitBounds(bounds);
+            var newAddress = $('#pac-input').val();
+            $('#new-location').val(newAddress);
+            $('#pac-input').removeClass('open');
         });
 
-        markers.push(marker);
+        var infowindow = new google.maps.InfoWindow();
 
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            return function() {
-                infowindow.setContent(
-                                    '<div class="parking-info"><div class="marker-row mr-address marker-row--flex"><div><span>Parking Address: </span><p> ' + locations[i][0].address + '</p></div><div><img src="' + locations[i][0].image + '"></div></div>' +
-                                    '<div class="marker-row mr-cost"><span>Minimum Cost: </span><p> ' + locations[i][0].minimumcost + '</p></div>' + 
-                                    '<div class="marker-row mr-time"><span>Parking Hours: </span><p> ' + locations[i][0].time + '</p></div>' +   
-                                    '<div class="marker-row mr-size"><span>Max Size: </span><p> ' + locations[i][0].size + '</p></div>' +   
-                                    '<div class="marker-row mr-attendent"><span>Attendent Availability: </span><p> ' + locations[i][0].attendent + '</p></div>' +   
-                                    '<div class="marker-row mr-verified"><span>Verified Owner: </span><p> ' + locations[i][0].verified + '</p></div>'  +
-                                    '<div class="marker-row mr-valvet"><span>Valvet Parking: </span><p> ' + locations[i][0].valvet + '</p></div></div>'
-                                    );
-                infowindow.open(map, marker);
-            }
-        })(marker, i));
+        var marker, i;
+        var markers = new Array();
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+
+            markers.push(marker);
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(
+                                        '<div class="parking-info"><div class="marker-row mr-address marker-row--flex"><div><span>Parking Address: </span><p> ' + locations[i][0].address + '</p></div><div><img src="' + locations[i][0].image + '"></div></div>' +
+                                        '<div class="marker-row mr-cost"><span>Minimum Cost: </span><p> ' + locations[i][0].minimumcost + '</p></div>' + 
+                                        '<div class="marker-row mr-time"><span>Parking Hours: </span><p> ' + locations[i][0].time + '</p></div>' +   
+                                        '<div class="marker-row mr-size"><span>Max Size: </span><p> ' + locations[i][0].size + '</p></div>' +   
+                                        '<div class="marker-row mr-attendent"><span>Attendent Availability: </span><p> ' + locations[i][0].attendent + '</p></div>' +   
+                                        '<div class="marker-row mr-verified"><span>Verified Owner: </span><p> ' + locations[i][0].verified + '</p></div>'  +
+                                        '<div class="marker-row mr-valvet"><span>Valvet Parking: </span><p> ' + locations[i][0].valvet + '</p></div></div>'
+                                        );
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+
+        function AutoCenter() {
+            //  Create a new viewpoint bound
+            var bounds = new google.maps.LatLngBounds();
+            //  Go through each...
+            $.each(markers, function(index, marker) {
+                bounds.extend(marker.position);
+            });
+            //  Fit these bounds to the map
+            map.fitBounds(bounds);
+        }
+        AutoCenter();
     }
 
-    function AutoCenter() {
-        //  Create a new viewpoint bound
-        var bounds = new google.maps.LatLngBounds();
-        //  Go through each...
-        $.each(markers, function(index, marker) {
-            bounds.extend(marker.position);
-        });
-        //  Fit these bounds to the map
-        map.fitBounds(bounds);
+    if ( exist( '#map-canvas' ) ) {
+        googleMap_initialize();
     }
-    AutoCenter();
-
 
 }); // end file

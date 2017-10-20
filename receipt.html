@@ -1,0 +1,214 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/general.css">
+    </head>
+    <body>
+
+
+    
+        <!--=================================================================================================-->
+                                                    <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-4">
+                        <a href="index.html" class="header-logo">
+                            <img src="images/logo-grey.svg" alt="Park KoPark Mo">
+                        </a>
+                    </div>
+
+                    <div class="login-controls">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <a href="signup.html">Sign Up</a> / <a href="login.html">Sign in</a>
+                    </div>
+
+                    <div class="col-sm-8 text-lg-right">
+                        <nav class="header-menu">
+                            <ul>
+                                <li class="menu-item menu-item-home current-menu-item"><a href="index">Home</a></li>
+                                <li class="menu-item"><a href="about.html">About-us</a></li>
+                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                <li class="menu-item"><a href="#">Guidline</a></li>
+                                <li class="menu-item"><a href="#">Terms and conditions</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div><!-- end wrapper -->
+        </header><!-- end header -->
+        
+        <button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>  
+
+        <section class="section">
+            <div class="container">
+                
+                <div class="page-title">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h1><img src="/images/marker-green-title.png" alt=""> <span>Parking Spot: @223 hillside dr, ketchum</span></h1>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="tel:02-369 89965"><img src="images/phone-call.svg" alt="">02-369 89965</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-title">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h2><img src="images/car-icon.png" alt=""> <span>Parking details</span></h2>
+                        </div>
+                        <div class="col-md-5">
+                            <p class="danger">Payment Status: Payment To Attendent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-7 parkingDetails">
+                        
+                        <div>
+                            <div class="marker-row mr-time">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <span>Parking Date Time</span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-group--date">
+                                            <input type='text' class="datepicker-input form-control" data-timepicker="true" data-time-format='hh:ii aa' data-position="right top" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end details row -->
+                            <div class="marker-row mr-time">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <span>Leaving Date Time</span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group form-group--date">
+                                            <input type='text' class="datepicker-input form-control" data-timepicker="true" data-time-format='hh:ii aa' data-position="right top" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end details row -->
+                            <div class="marker-row mr-time">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <span>Parking hour</span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="total-time" value="120">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end details row -->
+                            <div class="marker-row mr-price-round">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <span>Parking available</span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="total-price" value="120 $">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end details row -->
+                        </div>
+                        <br>
+                        <div class="accordion accordion--compact">
+                            <h3 class="accordion__title">Additional services</h3>
+                            <div class="accordion__content">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <label class="col-form-label">1. Wash your car outside</label>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label class="custom-control custom-checkbox">
+                                                <input type="checkbox" name="attendant" value="1">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">5$</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end accordion -->
+
+                        <div class="row row-total align-items-center">
+                            <div class="col-sm-6">
+                                <span>Total cost</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="total-time" value="120$">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col col-md-5">
+                    </div>  
+
+                    <div class="col-sm-12"> 
+                        <article class="article">   
+                            <p>
+                                <ul>  
+                                    <li>* Terms and conditions :</li>
+                                    <li>1) Please arrival on your schedule time: Parking will treat no show off after 15 mins delay.</li>
+                                    <li>2) No show off parking is non-refundable</li>
+                                    <li>3) Parking can be cancel only before 8 hours of parking schedule.</li>
+                                </ul>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- //////////////////////////////////////////////////////////////////////// -->
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 text-lg-left text-center">
+                        <p class="copyright">Copyright@ 2015 Park Ko Park Mo. All Rights Reserved</p>
+                    </div>
+                    <div class="col-12 col-md-6 text-md-right text-center">
+                        <ul class="socials">
+                            <li class="social-item"><a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div id="modal-popup" class="fncb-hide zoom-anim-dialog popup"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk&libraries=places&sensor=false"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

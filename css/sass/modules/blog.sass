@@ -1,16 +1,54 @@
 .page-title
+    width: 100% 
+    .row
+        width: 100% 
+        border-bottom: 1px solid #999
+        margin: 0 
+        margin-bottom:  30px   
+        padding-bottom: 10px
+        h1,h2
+            border: none
+            margin-bottom: 0 
+            padding-bottom: 0 
+        & > div
+            padding-left: 0
+            padding-right: 0
+            &:last-child
+                text-align: right 
+    a[href^="tel"]
+        font-size: 18px 
+        transition: all .2s
+        text-decoration: none
+        &:hover
+            opacity: .6 
+    p
+        margin: 0 
     h1,
     h2
         font-size: 20px
         font-weight: 400
         padding-bottom: 10px
         border-bottom: 1px solid #999
-        margin-bottom:  30px     
-        
+        margin-bottom:  30px   
+    h2
+        color: #000
+        font-size: 16px   
+        img
+            display: inline-block
+            vertical-align: middle
+            margin-right: 14px 
+        span
+            display: inline-block
+            vertical-align: middle
+a[href^="tel"]
+    img
+        width: 22px
+        margin-right: 16px   
 article
     font-size: 14px
     line-height: 30px
     color: #666666   
+    letter-spacing: .08em
     
 .article
     h1,
@@ -41,7 +79,16 @@ article
         .continue
             margin-top: 32px 
             
+    ul
+        list-style-type: none
+        list-style-position: inside 
+            
 .continue
     display: block
     color: $green
     font-size: 16px  
+    
+.danger
+    color: $red
+    font-size: 14px
+    letter-spacing: .06em   

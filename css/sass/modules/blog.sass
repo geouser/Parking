@@ -15,6 +15,14 @@
             padding-right: 0
             &:last-child
                 text-align: right 
+    a[href^="tel"]
+        font-size: 18px 
+        transition: all .2s
+        text-decoration: none
+        &:hover
+            opacity: .6 
+    p
+        margin: 0 
     h1,
     h2
         font-size: 20px
@@ -32,7 +40,10 @@
         span
             display: inline-block
             vertical-align: middle
-        
+a[href^="tel"]
+    img
+        width: 22px
+        margin-right: 16px   
 article
     font-size: 14px
     line-height: 30px
@@ -68,7 +79,16 @@ article
         .continue
             margin-top: 32px 
             
+    ul
+        list-style-type: none
+        list-style-position: inside 
+            
 .continue
     display: block
     color: $green
     font-size: 16px  
+    
+.danger
+    color: $red
+    font-size: 14px
+    letter-spacing: .06em   

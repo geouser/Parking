@@ -50,6 +50,10 @@
 		background-color: $green
 		border-color: $green 
 		
+		&:hover
+			color: #fff
+			background-color: #3A8022 
+		
 	&--grey
 		color: $grey
 		background-color: #D5D5D5
@@ -203,6 +207,12 @@
 	font-weight: 300  
 	position: relative
 	
+	@media (min-width: 576px)
+		&.border-bottom
+			margin-bottom: 10px
+			padding-bottom: 10px 
+			border-bottom: 1px solid #e1e1e1
+	
 	.label
 		display: block
 		width: 100%
@@ -215,6 +225,20 @@
 			margin-bottom: 0
 			width: 100%
 			padding: 4.5px 0 
+	
+	.label,
+	.col-form-label
+		display: flex
+		
+		.fa
+			display: inline-block
+			font-size: 16px 
+			margin-right: 10px 
+			line-height: 21px 
+			
+			@media (max-width: 576px)
+				font-size: 14px
+				margin-right: 5px
 		
 
 .group-title

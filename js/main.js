@@ -311,7 +311,7 @@ jQuery(document).ready(function($) {
             time: '8am -12hrs, weekly, monthly',
             size: 'Compact',
             attendent: 'yes',
-            verified: 'yes',
+            verified: 'no',
             valvet: 'no'
         }, 51.503510, -0.119434, 1],
         [{
@@ -386,7 +386,14 @@ jQuery(document).ready(function($) {
         var markers = new Array();
 
         for (i = 0; i < locations.length; i++) {
+            if ( locations[i][0].verified == 'yes' ) {
+                var markerImage = new google.maps.MarkerImage('images/marker-verified.svg', new google.maps.Size(30, 41));
+            } else {
+                var markerImage = new google.maps.MarkerImage('images/marker-not-verified.svg', new google.maps.Size(30, 41));
+            }
+            
             marker = new google.maps.Marker({
+                icon: markerImage,
                 position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                 map: map
             });
